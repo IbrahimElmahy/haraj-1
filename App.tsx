@@ -98,24 +98,30 @@ const App: React.FC = () => {
         {/* AI Analysis Section */}
         <AIAnalysis data={currentData} />
 
-        {/* Charts Section */}
-        <ChartsSection data={currentData} />
-
         {/* Platform Detailed Analysis Cards (Renamed Header) */}
         <div className="mb-6 mt-8">
-          <h2 className="text-2xl font-bold text-slate-900">تفاصيل أداء كل منصة</h2>
-          <p className="text-slate-500 mt-1">إحصائيات دقيقة وتحليل شامل لكل قناة على حدة</p>
+          <h2 className="text-2xl font-bold text-slate-900 flex items-center gap-3">
+             <span className="w-1.5 h-8 bg-indigo-600 rounded-full"></span>
+             تفاصيل أداء المنصات
+             <span className="text-sm font-normal text-slate-400 mt-1 mr-2">(إحصائيات مفصلة لكل قناة)</span>
+          </h2>
         </div>
-        <PlatformAnalysisCards data={currentData} />
+        <PlatformAnalysisCards data={currentData} previousData={previousData} />
+
+        {/* Charts Section */}
+        <div className="mt-12">
+           <h2 className="text-2xl font-bold text-slate-900 mb-6">مقارنة عامة</h2>
+           <ChartsSection data={currentData} />
+        </div>
 
         {/* Summary Table (Moved to bottom) */}
-        <div className="mt-12">
+        <div className="mt-8">
            <DetailedTable data={currentData} />
         </div>
 
       </div>
     </div>
   );
-};
+}
 
 export default App;
