@@ -1,9 +1,72 @@
-import { Platform, QuarterData } from './types';
+
+import { Platform, QuarterData, PlatformMetrics } from './types';
+
+const createEmptyPlatforms = (): PlatformMetrics[] => [
+  {
+    name: Platform.TikTok,
+    views: 0,
+    engagement: 0,
+    notes: '-',
+    color: '#000000',
+    analysisPoints: []
+  },
+  {
+    name: Platform.Facebook,
+    views: 0,
+    engagement: 0,
+    notes: '-',
+    color: '#1877F2',
+    analysisPoints: []
+  },
+  {
+    name: Platform.Instagram,
+    views: 0,
+    engagement: 0,
+    notes: '-',
+    color: '#E4405F',
+    analysisPoints: []
+  },
+  {
+    name: Platform.LinkedIn,
+    views: 0,
+    engagement: 0,
+    notes: '-',
+    color: '#0A66C2',
+    analysisPoints: []
+  }
+];
+
+const EMPTY_CONCLUSION = {
+  tiktok: '-',
+  facebook: '-',
+  instagram: '-',
+  linkedin: '-'
+};
 
 export const QUARTERS: QuarterData[] = [
   {
     id: 'Q1',
     name: 'الربع الأول (Q1)',
+    totalViews: '0',
+    topPlatform: Platform.TikTok,
+    platformsManaged: 0,
+    keyInsight: 'لا توجد بيانات متاحة لهذا الربع',
+    platforms: createEmptyPlatforms(),
+    generalConclusion: EMPTY_CONCLUSION
+  },
+  {
+    id: 'Q2',
+    name: 'الربع الثاني (Q2)',
+    totalViews: '0',
+    topPlatform: Platform.TikTok,
+    platformsManaged: 0,
+    keyInsight: 'لا توجد بيانات متاحة لهذا الربع',
+    platforms: createEmptyPlatforms(),
+    generalConclusion: EMPTY_CONCLUSION
+  },
+  {
+    id: 'Q3',
+    name: 'الربع الثالث (Q3)',
     totalViews: '+1.4M',
     topPlatform: Platform.TikTok,
     platformsManaged: 4,
@@ -70,54 +133,13 @@ export const QUARTERS: QuarterData[] = [
     }
   },
   {
-    id: 'Q2',
-    name: 'الربع الثاني (Q2)',
-    totalViews: '+1.6M',
+    id: 'Q4',
+    name: 'الربع الرابع (Q4)',
+    totalViews: '0',
     topPlatform: Platform.TikTok,
-    platformsManaged: 4,
-    keyInsight: 'استمرار هيمنة تيك توك مع تحسن ملحوظ في انستغرام',
-    platforms: [
-      {
-        name: Platform.TikTok,
-        views: 1550000,
-        profileVisits: 13000,
-        engagement: 18000,
-        notes: 'زيادة مستمرة',
-        color: '#000000',
-        analysisPoints: ['الاستمرار في الصدارة', 'زيادة البث المباشر']
-      },
-      {
-        name: Platform.Facebook,
-        views: 30000,
-        engagement: 120,
-        notes: 'ثبات في الأداء',
-        color: '#1877F2',
-        analysisPoints: ['الحفاظ على الجمهور الحالي']
-      },
-      {
-        name: Platform.Instagram,
-        views: 15000,
-        profileVisits: 500,
-        engagement: 400,
-        newFollowers: 150,
-        notes: 'نمو كبير بعد تغيير الاستراتيجية',
-        color: '#E4405F',
-        analysisPoints: ['نجاح حملة الريلز المكثفة']
-      },
-      {
-        name: Platform.LinkedIn,
-        views: 500,
-        engagement: 20,
-        notes: 'بداية التحسن',
-        color: '#0A66C2',
-        analysisPoints: ['تحسن طفيف بعد نشر قصص النجاح']
-      }
-    ],
-    generalConclusion: {
-      tiktok: 'ما زال في الصدارة.',
-      facebook: 'أداء مستقر.',
-      instagram: 'نجم الربع الصاعد.',
-      linkedin: 'بداية تحرك الأرقام.'
-    }
+    platformsManaged: 0,
+    keyInsight: 'لا توجد بيانات متاحة لهذا الربع',
+    platforms: createEmptyPlatforms(),
+    generalConclusion: EMPTY_CONCLUSION
   }
 ];
