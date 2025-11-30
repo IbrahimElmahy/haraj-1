@@ -1,5 +1,5 @@
 
-import { Platform, QuarterData, PlatformMetrics } from './types';
+import { Platform, QuarterData } from './types';
 
 export const QUARTERS: QuarterData[] = [
   {
