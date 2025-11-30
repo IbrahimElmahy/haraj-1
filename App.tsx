@@ -9,11 +9,11 @@ import { PlatformAnalysisCards } from './components/PlatformAnalysisCards';
 import { AIAnalysis } from './components/AIAnalysis';
 
 const App: React.FC = () => {
-  // Default to Q3 as per requirements
-  const [selectedQuarterId, setSelectedQuarterId] = useState<string>('Q3');
+  // Default to the single available period
+  const [selectedQuarterId, setSelectedQuarterId] = useState<string>('AUG_NOV');
 
   const currentQuarterIndex = QUARTERS.findIndex(q => q.id === selectedQuarterId);
-  const currentData = QUARTERS[currentQuarterIndex];
+  const currentData = QUARTERS[currentQuarterIndex] || QUARTERS[0];
   const previousData = currentQuarterIndex > 0 ? QUARTERS[currentQuarterIndex - 1] : null;
 
   // Check if the current quarter has any data (views > 0)
@@ -45,7 +45,7 @@ const App: React.FC = () => {
         <header className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-10">
           <div>
             <h1 className="text-3xl font-extrabold text-slate-900 mb-2">
-              تقرير ربع سنوي لأداء السوشيال ميديا
+              تقرير أداء السوشيال ميديا
             </h1>
             <p className="text-slate-500 font-medium">
               يعرض أداء 4 منصات: تيك توك – فيسبوك – إنستغرام – لينكدإن
@@ -63,7 +63,7 @@ const App: React.FC = () => {
                     : 'text-slate-500 hover:bg-slate-50'
                 }`}
               >
-                {quarter.id}
+                {quarter.name}
               </button>
             ))}
           </div>
@@ -74,9 +74,9 @@ const App: React.FC = () => {
             <div className="bg-slate-50 p-6 rounded-full mb-6">
               <FolderOpen className="w-16 h-16 text-slate-300" />
             </div>
-            <h2 className="text-2xl font-bold text-slate-800 mb-2">لا توجد بيانات لهذا الربع</h2>
+            <h2 className="text-2xl font-bold text-slate-800 mb-2">لا توجد بيانات لهذه الفترة</h2>
             <p className="text-slate-500 max-w-md">
-              لم يتم رصد أي نشاط أو بيانات تحليلية للفترة المحددة ({currentData.name}). يرجى الانتقال إلى الربع الثالث (Q3) لعرض التقرير.
+              لم يتم رصد أي نشاط أو بيانات تحليلية للفترة المحددة ({currentData.name}).
             </p>
           </div>
         ) : (
