@@ -4,7 +4,7 @@ import { Platform, QuarterData } from './types';
 export const QUARTERS: QuarterData[] = [
   {
     id: 'AUG_NOV',
-    name: 'أغسطس - نوفمبر',
+    name: 'أغسطس - نوفمبر 2025',
     totalViews: '+1.4M',
     topPlatform: Platform.TikTok,
     platformsManaged: 4,

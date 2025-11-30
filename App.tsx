@@ -45,7 +45,7 @@ const App: React.FC = () => {
         <header className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-10">
           <div>
             <h1 className="text-3xl font-extrabold text-slate-900 mb-2">
-              تقرير أداء السوشيال ميديا
+              تقرير أداء السوشيال ميديا 2025
             </h1>
             <p className="text-slate-500 font-medium">
               يعرض أداء 4 منصات: تيك توك – فيسبوك – إنستغرام – لينكدإن
