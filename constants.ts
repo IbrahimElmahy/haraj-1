@@ -15,6 +15,7 @@ export const QUARTERS: QuarterData[] = [
         views: 1400000,
         profileVisits: 11000,
         engagement: 15243,
+        newFollowers: 4500,
         notes: 'أعلى أداء بين كل المنصات',
         color: '#000000',
         analysisPoints: [
@@ -29,7 +30,7 @@ export const QUARTERS: QuarterData[] = [
         views: 2800,
         engagement: 75,
         profileVisits: 717,
-        newFollowers: 8,
+        newFollowers: 15,
         notes: 'نمو هائل في الزيارات (+124%)',
         color: '#1877F2',
         analysisPoints: [
@@ -57,6 +58,7 @@ export const QUARTERS: QuarterData[] = [
         name: Platform.LinkedIn,
         views: 75,
         engagement: 3,
+        newFollowers: 3,
         notes: 'يحتاج محتوى مهني لرفع التفاعل',
         color: '#0A66C2',
         analysisPoints: [
