@@ -15,7 +15,7 @@ export const QUARTERS: QuarterData[] = [
         views: 1400000,
         profileVisits: 11000,
         engagement: 15243,
-        newFollowers: 4500,
+        newFollowers: 3000,
         notes: 'أعلى أداء بين كل المنصات',
         color: '#000000',
         analysisPoints: [
